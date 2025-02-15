@@ -1,11 +1,13 @@
 import requests
+from dotenv import load_dotenv
+import os
 
 #checks how many requests, ensures we aren't above daily limit
 
 # API endpoint
 url = "https://v1.basketball.api-sports.io/status"
 
-apiKey = "b12e1a56d3f6803de2e8961389f6768f" #api key (priya's profile)
+apiKey = os.getenv("apiKey") #api key (priya's profile)
 
 headers = {
     "x-apisports-key": apiKey 
