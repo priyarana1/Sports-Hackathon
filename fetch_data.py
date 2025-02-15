@@ -1,7 +1,8 @@
 import requests
 import sqlalchemy
 import pandas
-
+from dotenv import load_dotenv
+import os
 
 #from api dashboard
 rutgers_team_id = 2096
@@ -11,7 +12,7 @@ season = "2023-2024"
 
 
 url = "https://v1.basketball.api-sports.io/leagues" #overall url from website
-apiKey = "b12e1a56d3f6803de2e8961389f6768f" #api key (priya's profile)
+apiKey = os.getenv("apiKey") #api key (priya's profile)
 
 #specific to rutgers, ncaa
 urlRutgersTeam = f"https://v1.basketball.api-sports.io/teams?id={rutgers_team_id}"
