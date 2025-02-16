@@ -1,5 +1,6 @@
 // src/components/Leaderboard.js
 import React, { useEffect, useState } from 'react';
+import UserProfile from './UserProfile';
 import './Leaderboard.css';
 
 function Leaderboard() {
@@ -10,7 +11,7 @@ function Leaderboard() {
     fetch('http://localhost:8000/api/leaderboard') // Update URL as needed
       .then(response => response.json())
       .then(data => {
-        setUsers(data);
+        UserProfile(data);
         setLoading(false);
       })
       .catch(error => {
@@ -39,8 +40,8 @@ function Leaderboard() {
           {players.map((player, index) => (
             <tr key={player.id || index}>
               <td>{index + 1}</td>
-              <td>{user.name}</td>
-              <td>{user.points}</td>
+              <td>{UserProfile.name}</td>
+              <td>{UserProfile.points}</td>
             </tr>
           ))}
         </tbody>
