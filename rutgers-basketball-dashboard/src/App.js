@@ -3,7 +3,7 @@ import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import Leaderboard from './components/Leaderboard';
 import PredictionForm from './components/PredictionForm';
-import VotingApp from './components/PredictionForm';
+import VotingApp from './components/VotingApp';
 import Stats from './components/Stats';
 import Rewards from './components/Rewards';
 import UserProfile from './components/UserProfile';
