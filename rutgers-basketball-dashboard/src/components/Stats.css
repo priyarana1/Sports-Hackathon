@@ -1,0 +1,27 @@
+/* src/components/Stats.css */
+.stats-container {
+    margin: 20px auto;
+    width: 80%;
+    padding: 20px;
+  }
+  
+  .stats-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .stats-table th,
+  .stats-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .stats-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .stats-table th {
+    background-color: #cc0000;
+    color: white;
+  }
+  
