@@ -29,7 +29,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Leaderboard />} />
           <Route path="/prediction" element={<PredictionForm />} />
-          <Route path="/voting" element={<VotingApp />} />
+          <Route path="/voting" element={<Voting/>} />
           <Route path="/stats" element={<Stats />} />
           <Route path="/rewards" element={<Rewards />} />
           <Route path="/profile" element={<UserProfile />} />
