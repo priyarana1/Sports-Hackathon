@@ -1,4 +1,8 @@
 import logo from './logo.svg';
+import Leaderboard from './Leaderboard';
+import Voting from './Voting';
+import Stats from './Stats';
+import Rewards from './Rewards';
 import './App.css';
 
 function App() {

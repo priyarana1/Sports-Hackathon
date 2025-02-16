@@ -14,7 +14,7 @@ function Leaderboard() {
     }, []);
 
     return (
-        <div>
+        <div className="leaderboardstyle">   
             {/*This creates a leaderboard title*/}
             <h2> Leaderboard</h2>
 
