@@ -1,9 +1,5 @@
-import React from "react"
-import Leaderboard from "./components/Leaderboard";
-import Voting from "./components/Votingapp";
-import Stats from "./components/Stats";
-import Rewards from "./components/rewards";
-import "./App.css";
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
