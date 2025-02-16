@@ -1,0 +1,99 @@
+{
+    "get": "games",
+    "parameters": {
+        "id": "2096"
+    },
+    "errors": [],
+    "results": 2,
+    "response": [
+        {
+            "game": {
+                "id": 2096
+            },
+            "team": {
+                "id": 135
+            },
+            "field_goals": {
+                "total": 39,
+                "attempts": 81,
+                "percentage": 48
+            },
+            "threepoint_goals": {
+                "total": 13,
+                "attempts": 30,
+                "percentage": 43
+            },
+            "freethrows_goals": {
+                "total": 19,
+                "attempts": 27,
+                "percentage": 70
+            },
+            "rebounds": {
+                "total": 51,
+                "offence": 16,
+                "defense": 35
+            },
+            "assists": 26,
+            "steals": 5,
+            "blocks": 8,
+            "turnovers": 19,
+            "personal_fouls": 18
+        },
+        {
+            "game": {
+                "id": 2096
+            },
+            "team": {
+                "id": 157
+            },
+            "field_goals": {
+                "total": 37,
+                "attempts": 92,
+                "percentage": 41
+            },
+            "threepoint_goals": {
+                "total": 14,
+                "attempts": 40,
+                "percentage": 35
+            },
+            "freethrows_goals": {
+                "total": 12,
+                "attempts": 13,
+                "percentage": 92
+            },
+            "rebounds": {
+                "total": 33,
+                "offence": 10,
+                "defense": 23
+            },
+            "assists": 23,
+            "steals": 10,
+            "blocks": 5,
+            "turnovers": 10,
+            "personal_fouls": 22
+        }
+    ]
+}
+
+✅ Available Columns:
+[
+    "assists",
+    "steals",
+    "blocks",
+    "turnovers",
+    "personal_fouls",
+    "game.id",
+    "team.id",
+    "field_goals.total",
+    "field_goals.attempts",
+    "field_goals.percentage",
+    "threepoint_goals.total",
+    "threepoint_goals.attempts",
+    "threepoint_goals.percentage",
+    "freethrows_goals.total",
+    "freethrows_goals.attempts",
+    "freethrows_goals.percentage",
+    "rebounds.total",
+    "rebounds.offence",
+    "rebounds.defense"
+]
