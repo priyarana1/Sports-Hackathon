@@ -1,52 +1,57 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+// src/components/Leaderboard.js
+import React, { useEffect, useState } from 'react';
+import './Leaderboard.css';
 
 function Leaderboard() {
-    const [users, setUsers] = useState([]);
+  const [players, setPlayers] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        axios
-            .get("http://localhost:5000/leaderboard") // Make sure this API exists in your backend
-            .then((response) => {
-                setUsers(response.data); // Update the leaderboard with user rankings
-            })
-            .catch((error) => console.error("Error fetching leaderboard:", error));
-    }, []);
+  useEffect(() => {
+    fetch('http://localhost:8000/api/leaderboard') // Update URL as needed
+      .then(response => response.json())
+      .then(data => {
+        setPlayers(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error("Error fetching leaderboard data:", error);
+        setLoading(false);
+      });
+  }, []);
 
-    return (
-        <div className="leaderboardstyle">   
-            {/*This creates a leaderboard title*/}
-            <h2> Leaderboard</h2>
+  if (loading) {
+    return <div>Loading leaderboard...</div>;
+  }
 
-            {/*This creates a table*/}
-            <table className="tablestyle">
-                {/*This creates a table header*/}
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Username</th>
-                        <th>Points</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    {users.length > 0 ? (
-                        users.slice(0, 5).map((user, index) => ( // 🔹 Only take the first 5 users
-                            <tr key={index}>
-                                <td>{user.rank}</td>
-                                <td>{user.username}</td>
-                                <td>{user.points}</td>
-                            </tr>
-                        ))
-                    ) : (
-                        <tr>
-                            <td colSpan="3">Loading...</td>
-                        </tr>
-                    )}
-                </tbody>
-            </table>
-        </div>
-    );
+  return (
+    <div className="leaderboard-container">
+      <h2>Top Players</h2>
+      <table className="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Player Name</th>
+            <th>Points</th>
+            <th>Rebounds</th>
+            <th>Assists</th>
+            <th>Defense</th>
+          </tr>
+        </thead>
+        <tbody>
+          {players.map((player, index) => (
+            <tr key={player.id || index}>
+              <td>{index + 1}</td>
+              <td>{player.name}</td>
+              <td>{player.points}</td>
+              <td>{player.rebounds}</td>
+              <td>{player.assists}</td>
+              <td>{player.defense}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
 }
 
 export default Leaderboard;

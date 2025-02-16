@@ -1,0 +1,34 @@
+/* src/components/VotingApp.css */
+.voting-container {
+    margin: 20px auto;
+    width: 60%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fefefe;
+  }
+  
+  .voting-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .voting-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .voting-list li button {
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .voting-list li button:hover {
+    background-color: #a30000;
+  }
+  
