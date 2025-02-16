@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import Leaderboard from "./components/Leaderboard";
+import Voting from "./components/Votingapp";
+import Stats from "./components/Stats";
+import Rewards from "./components/rewards";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div Classname = "App">
+      <h1> Rutger Basketball Fan Dashboard </h1>
+      <Leaderboard/>
+      <Voting/>
+      <Stats/>
+      <Rewards/>
     </div>
-  );
+  )
 }
 
 export default App;
