@@ -1,6 +1,7 @@
 import requests
 import sqlalchemy
-import pandas
+import pandas as pd
+import json
 
 
 #from api dashboard
@@ -43,21 +44,84 @@ def getData(url):
         print(f"Error: {response.status_code}, {response.text}")
         return None
     
-print(response) #must return 200
-responseData = response.json()
+#function to create dataframe
+def get_dataframe(url, name):
+    data = getData(url)  
+    if data and isinstance(data, dict) and 'response' in data:  # Ensure data is a dictionary
+        df = pd.json_normalize(data['response'])  
+        df.name = name  
+        return df
+    else:
+        print(f"Error fetching {name} or response key missing")
+        return None
+    
+
+df_ncaa_standings = get_dataframe(urlRutgersStandings, "NCAA Standings")
+df_rutgers_team = get_dataframe(urlRutgersTeam, "Rutgers Team Info")
+df_rutgers_players = get_dataframe(urlRutgersPlayers, "Rutgers Players")
+df_rutgers_games = get_dataframe(urlRutgersGames, "Rutgers Games")
+df_rutgers_team_stats = get_dataframe(urlRutgersStats, "Rutgers Team Stats")
+df_rutgers_player_stats = get_dataframe(urlRutgersPlayerStats, "Rutgers Player Stats")
+
+
+responseData = response.json() #convert data to json
+df_ncaa_standings = pd.json_normalize(response['response'], sep='_')
+
+#extracts neccessary data for ncaa standings
+df_ncaa_standings = df_ncaa_standings[[
+    'league_id', 'league_name', 'league_season',
+    'team_id', 'team_name', 'team_logo',
+    'position', 'points_for', 'points_against',
+    'games_played', 'games_win_total', 'games_lose_total'
+]]
+
+#renames columns
+#df_ncaa_standings.columns = [
+#    'League_ID', 'League_Name', 'Season',
+ #   'Team_ID', 'Team_Name', 'Team_Logo',
+#    'Ranking', 'Points',
+#    'Games_Played', 'Wins', 'Losses'
+#]
 
 
 
-print(getData(urlRutgersTeam))
-print(getData(urlRutgersPlayers))
-print(getData(urlRutgersStandings))
-print(getData(urlRutgersGames))
-print(getData(urlRutgersStats))
-print(getData(urlRutgersPlayerStats))
+#print json standings data to see why im getting an error
+#look at column names, make sure they match what i derived
+data = getData(urlRutgersStandings)  # Fetch raw JSON
+print(json.dumps(data, indent=4))  # Pretty print the JSON
 
 
-print(response) #must return 200
-responseData = response.json()
+
+#checking the json data structure 
+#print(df_ncaa_standings.head())  # Show first few rows
+#print(df_ncaa_standings.columns)  # Show available columns
+
+
+#extracts neccessary data for ncaa standings
+
+#print dataframes
+#print(df_ncaa_standings.head())  #prints first 5 rows
+#print(df_rutgers_team.head())
+#print(df_rutgers_players.head())
+#print(df_rutgers_games.head())
+#print(df_rutgers_team_stats.head())
+#print(df_rutgers_player_stats.head())
+
+
+
+#show all json data
+#print(getData(urlRutgersTeam))
+#print(getData(urlRutgersPlayers))
+#print(getData(urlRutgersStandings))
+#print(getData(urlRutgersGames))
+#print(getData(urlRutgersStats))
+#print(getData(urlRutgersPlayerStats))
+
+
+#print(response) #must return 200
+#responseData = response.json()
 #print(responseData)
 #df = pandas.json_normalize(responseData, 'response')
 #print(df)
+
+
