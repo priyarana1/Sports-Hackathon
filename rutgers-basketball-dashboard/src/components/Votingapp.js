@@ -1,6 +1,7 @@
 // src/components/VotingApp.js
 import React, { useState, useEffect } from 'react';
 import './VotingApp.css';
+import Loading from "./Loading"; 
 
 function VotingApp() {
   const [votes, setVotes] = useState([]);
@@ -8,7 +9,7 @@ function VotingApp() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/votes') // Update URL as needed
+    fetch('http://localhost:8000/api/votes')
       .then(response => response.json())
       .then(data => {
         setVotes(data);
@@ -38,13 +39,10 @@ function VotingApp() {
       });
   };
 
-  if (loading) {
-    return <div>Loading voting options...</div>;
-  }
-
   return (
     <div className="voting-container">
-      <h2>Vote for Your Favorite Team or Player</h2>
+      {loading && <Loading />}
+      <h2>Vote for Points</h2>
       <ul className="voting-list">
         {votes.map((option, index) => (
           <li key={index}>

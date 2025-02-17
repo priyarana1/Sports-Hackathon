@@ -1,6 +1,7 @@
 // src/components/PredictionForm.js
 import React, { useState } from 'react';
 import './PredictionForm.css';
+import Loading from "./Loading"; 
 
 function PredictionForm() {
   const [gameWinner, setGameWinner] = useState('');
@@ -10,7 +11,7 @@ function PredictionForm() {
     e.preventDefault();
     const prediction = { gameWinner, topScorer };
 
-    fetch('http://localhost:8000/api/predictions', { // Update URL as needed
+    fetch('http://localhost:8000/api/predictions', { 
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -31,6 +32,7 @@ function PredictionForm() {
 
   return (
     <div className="prediction-form-container">
+      {loading && <Loading />}
       <h2>Make Your Prediction</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">

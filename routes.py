@@ -1,22 +1,71 @@
-from flask import Flask, jsonify, request
+import os
+from flask import Blueprint, render_template, redirect, url_for, flash, session
 from flask_sqlalchemy import SQLAlchemy
-from flask_bcrypt import Bcrypt
-from flask_jwt_extended import (
-    JWTManager, create_access_token, jwt_required, get_jwt_identity, get_jwt
-)
-from datetime import timedelta # imports, with JWT for token handling
+from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+from authlib.integrations.flask_client import OAuth
+from dotenv import load_dotenv # imports
 
-app = Flask(__name__) # create flask app
+load_dotenv() # load variables
 
-# NEED TO CHANGE DATA TO POSTGRES DATABASE
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://your_username:your_password@localhost/your_database"
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-app.config["JWT_SECRET_KEY"] = "your_jwt_secret_key"  # Change this to a strong secret key
+routes_bp = Blueprint("routes", __name__)
 
-db = SQLAlchemy(app) # creating db, password protection, and JWT tokens
-bcrypt = Bcrypt(app) 
-jwt = JWTManager(app)
+# creating db and setup
+db = SQLAlchemy()
 
+# flask-login configuration
+login_manager = LoginManager()
+login_manager.login_view = "routes.login"
+
+# user model
+class User(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(150), unique=True, nullable=False)
+    name = db.Column(db.String(150), nullable=False)
+
+@login_manager.user_loader # load user
+def load_user(user_id):
+    return User.query.get(int(user_id))
+
+@routes_bp.route("/dashboard") #protected route
+@login_required
+def dashboard():
+    return f"Hello, {current_user.name}! Welcome to your dashboard."
+
+@routes_bp.route("/logout") # logout route
+@login_required
+def logout():
+    logout_user()
+    flash("You have been logged out.", "info")
+    return redirect(url_for("routes.home"))
+
+@routes_bp.route("/login/callback") #OAuth callback
+def authorized():
+    token = session.get("token")
+    nonce = session.get("nonce")
+
+    if not token or not nonce:
+        flash("Authentication failed.", "danger")
+        return redirect(url_for("routes.home"))
+
+    user_info = OAuth.google.parse_id_token(token, nonce=nonce)
+
+    if not user_info:
+        flash("Invalid authentication token.", "danger")
+        return redirect(url_for("routes.home"))
+
+    email = user_info.get("email")
+    name = user_info.get("name")
+
+    user = User.query.filter_by(email=email).first() #creating new user if doesnt exist
+    if not user:
+        user = User(email=email, name=name)
+        db.session.add(user)
+        db.session.commit()
+
+    login_user(user)
+    return redirect(url_for("routes.dashboard"))
+
+'''
 revoked_tokens = set()
 
 # user info format
@@ -74,7 +123,6 @@ def logout():
 def check_if_token_is_revoked(jwt_header, jwt_payload):
     return jwt_payload["jti"] in revoked_tokens 
 
-
-# 🚀 Run the app
 if __name__ == "__main__":
     app.run(debug=True)
+    '''
