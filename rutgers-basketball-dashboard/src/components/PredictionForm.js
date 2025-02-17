@@ -11,7 +11,7 @@ function PredictionForm() {
     e.preventDefault();
     const prediction = { gameWinner, topScorer };
 
-    fetch('http://localhost:8000/api/predictions', { // Update URL as needed
+    fetch('http://localhost:8000/api/predictions', { 
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

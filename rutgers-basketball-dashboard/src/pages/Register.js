@@ -1,8 +1,7 @@
-// src/pages/Register.js
 import React, { useState, useContext } from "react";
 import AuthContext from "../context/AuthContext";
 import Loading from "../components/Loading"; 
-import "./Login.css"; // or "Register.css" if you prefer a separate file
+import "./Login.css";
 
 const Register = () => {
   const { register } = useContext(AuthContext);
@@ -14,11 +13,15 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await register(username, password);
+    console.log("Register response:", response); // <-- Add this
+
     if (response.message) {
-      setSuccess("Registration successful! Please login.");
-    } else {
-      setError(response.error || "Registration failed");
+    setSuccess("Registration successful! Please login.");
+    }   
+    else {
+    setError(response.error || "Registration failed");
     }
+
   };
 
   return (

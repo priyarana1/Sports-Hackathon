@@ -9,7 +9,7 @@ function VotingApp() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/votes') // Update URL as needed
+    fetch('http://localhost:8000/api/votes')
       .then(response => response.json())
       .then(data => {
         setVotes(data);

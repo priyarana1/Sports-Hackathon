@@ -1,4 +1,3 @@
-// src/pages/Login.js
 import React, { useState, useContext } from "react";
 import AuthContext from "../context/AuthContext";
 import Loading from "../components/Loading"; 
@@ -14,7 +13,6 @@ const Login = () => {
     e.preventDefault();
     const response = await login(username, password);
     if (response.access_token) {
-      // success, redirect or show success
     } else {
       setError(response.error || "Invalid credentials");
     }

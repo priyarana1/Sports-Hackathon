@@ -8,7 +8,7 @@ function Rewards() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/rewards') // Update URL as needed
+    fetch('http://localhost:8000/api/rewards') 
       .then(response => response.json())
       .then(data => {
         setRewards(data);
