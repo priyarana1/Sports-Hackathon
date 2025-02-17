@@ -7,6 +7,8 @@ import Voting from './components/VotingApp';
 import Stats from './components/Stats';
 import Rewards from './components/Rewards';
 import UserProfile from './components/UserProfile';
+import Login from './components/Login';
+import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
 
 function App() {
@@ -27,12 +29,13 @@ function App() {
       </header>
       <main>
         <Routes>
+          <Route path="/login" element={<Login />} />
           <Route path="/" element={<Leaderboard />} />
           <Route path="/prediction" element={<PredictionForm />} />
           <Route path="/voting" element={<Voting/>} />
           <Route path="/stats" element={<Stats />} />
           <Route path="/rewards" element={<Rewards />} />
-          <Route path="/profile" element={<UserProfile />} />
+          <Route path="/profile" element={<ProtectedRoute> <UserProfile /> </ProtectedRoute>} />
         </Routes>
       </main>
       <footer>

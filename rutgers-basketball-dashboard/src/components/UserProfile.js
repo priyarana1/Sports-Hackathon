@@ -10,23 +10,25 @@ function UserProfile() {
     name: '',
     email: '',
   });
+  const token = localStorage.getItem('authToken');
+
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/user') // Update URL as needed
+    fetch('http://localhost:8000/api/user', {
+      headers: { Authorization: `Bearer ${token}` },
+    })
       .then(response => response.json())
       .then(data => {
         setProfile(data);
-        setFormState({
-          name: data.name,
-          email: data.email,
-        });
+        setFormState({ name: data.name, email: data.email, });
         setLoading(false);
       })
       .catch(error => {
         console.error("Error fetching user profile:", error);
         setLoading(false);
       });
-  }, []);
+  }, [token]);
+
 
   const handleEditToggle = () => {
     setEditing(!editing);
@@ -41,7 +43,8 @@ function UserProfile() {
     fetch('http://localhost:8000/api/user', {
       method: 'PUT',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify(formState)
     })
@@ -53,6 +56,11 @@ function UserProfile() {
       .catch(error => {
         console.error("Error updating profile:", error);
       });
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('authToken');
+    window.location.href = '/login';
   };
 
   if (loading) {
