@@ -1,6 +1,7 @@
 // src/components/UserProfile.js
 import React, { useState, useEffect } from 'react';
 import './UserProfile.css';
+import Loading from "./Loading"; 
 
 function UserProfile() {
   const [profile, setProfile] = useState(null);
@@ -69,6 +70,7 @@ function UserProfile() {
 
   return (
     <div className="profile-container">
+      {loading && <Loading />}
       <h2>User Profile</h2>
       {profile && !editing && (
         <div className="profile-info">

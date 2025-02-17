@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCAA Standings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .conference-header {
+            background-color: #e0e0e0;
+            font-weight: bold;
+            text-align: left;
+            padding: 10px;
+        }
+        #toggleContainer {
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>NCAA Standings</h1>
+    <div id="toggleContainer">
+        <label for="viewToggle">View: </label>
+        <select id="viewToggle">
+            <option value="all">All NCAA Standings</option>
+            <option value="sorted">Sorted by Win Percentage</option>
+        </select>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Conference</th>
+                <th>Position</th>
+                <th>Team Name</th>
+                <th>Wins</th>
+                <th>Losses</th>
+                <th>Win Percentage</th>
+            </tr>
+        </thead>
+        <tbody id="standingsTable">
+            <!-- Data will be populated here -->
+        </tbody>
+    </table>
+
+    <script>
+        let allStandings = [];
+
+        // Fetch the JSON data for NCAA standings
+        fetch('https://raw.githubusercontent.com/priyarana1/Sports-Hackathon/main/DF_NCAA_Standings.json')
+            .then(response => response.json())
+            .then(data => {
+                allStandings = data.conferences;
+                displayStandings(allStandings, true); // Display all standings by default
+            })
+            .catch(error => console.error('Error fetching the data:', error));
+
+        function calculateWinPercentage(wins, losses) {
+            return wins + losses > 0 ? (wins / (wins + losses)).toFixed(3) : '0.000';
+        }
+
+        function displayStandings(conferences, showRutgers) {
+            const standingsTableBody = document.getElementById('standingsTable');
+            standingsTableBody.innerHTML = ""; // Clear existing data
+
+            // Store Rutgers data for display
+            let rutgersData = null;
+
+            // Find Rutgers data and store it
+            for (const [conference, teams] of Object.entries(conferences)) {
+                teams.forEach(team => {
+                    if (team.team_name === "Rutgers") {
+                        rutgersData = { conference, ...team };
+                    }
+                });
+            }
+
+            // If Rutgers data is found, insert it at the top for the "all" view
+            if (showRutgers && rutgersData) {
+                const rutgersRow = standingsTableBody.insertRow();
+                standingsTableBody.insertRow().innerHTML = `<td colspan="6" class="conference-header">${rutgersData.conference}</td>`;
+                rutgersRow.insertCell(0).textContent = rutgersData.conference;
+                rutgersRow.insertCell(1).textContent = rutgersData.position; // Rutgers' position in Big Ten
+                rutgersRow.insertCell(2).textContent = rutgersData.team_name;
+                rutgersRow.insertCell(3).textContent = rutgersData.wins;
+                rutgersRow.insertCell(4).textContent = rutgersData.losses;
+                rutgersRow.insertCell(5).textContent = calculateWinPercentage(rutgersData.wins, rutgersData.losses);
+            }
+
+            // Now display the rest of the teams grouped by conference
+            const displayedConferences = new Set();
+            for (const [conference, teams] of Object.entries(conferences)) {
+                // Insert conference header
+                standingsTableBody.insertRow().innerHTML = `<td colspan="6" class="conference-header">${conference}</td>`;
+                displayedConferences.add(conference);
+
+                // Rank teams within the conference
+                let position = 1; // Reset position for each conference
+                teams.forEach(team => {
+                    const row = standingsTableBody.insertRow();
+                    row.insertCell(0).textContent = conference; // Display conference
+                    row.insertCell(1).textContent = position++; // Increment position for each team
+                    row.insertCell(2).textContent = team.team_name;
+                    row.insertCell(3).textContent = team.wins;
+                    row.insertCell(4).textContent = team.losses;
+                    row.insertCell(5).textContent = calculateWinPercentage(team.wins, team.losses); // Calculate and display win percentage
+                });
+            }
+        }
+
+        // Event listener for the view toggle
+        document.getElementById("viewToggle").addEventListener("change", (event) => {
+            const selectedValue = event.target.value;
+            if (selectedValue === "all") {
+                displayStandings(allStandings, true); // Show all standings with Rutgers
+            } else if (selectedValue === "sorted") {
+                const sortedStandings = Object.entries(allStandings).flatMap(([conference, teams]) => 
+                    teams.map(team => ({ ...team, conference })) // Include conference in each team object
+                ).sort((a, b) => parseFloat(b.win_percentage) - parseFloat(a.win_percentage));
+                
+                // Create a new structure to display sorted standings
+                const sortedTableBody = document.getElementById('standingsTable');
+                sortedTableBody.innerHTML = ""; // Clear existing data
+
+                let position = 1; // Reset position for sorted standings
+                sortedStandings.forEach(team => {
+                    const row = sortedTableBody.insertRow();
+                    row.insertCell(0).textContent = team.conference; // Display conference
+                    row.insertCell(1).textContent = position++; // Display position
+                    row.insertCell(2).textContent = team.team_name;
+                    row.insertCell(3).textContent = team.wins;
+                    row.insertCell(4).textContent = team.losses;
+                    row.insertCell(5).textContent = calculateWinPercentage(team.wins, team.losses); // Calculate and display win percentage
+                });
+            }
+        });
+    </script>
+</body>
+</html>

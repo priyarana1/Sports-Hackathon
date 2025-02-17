@@ -1,6 +1,7 @@
 // src/components/Stats.js
 import React, { useState, useEffect } from 'react';
 import './Stats.css';
+import Loading from "./Loading"; 
 
 function Stats() {
   const [stats, setStats] = useState([]);
@@ -19,12 +20,10 @@ function Stats() {
       });
   }, []);
 
-  if (loading) {
-    return <div>Loading stats...</div>;
-  }
 
   return (
     <div className="stats-container">
+      {loading && <Loading />}
       <h2>Team and Player Statistics</h2>
       <table className="stats-table">
         <thead>

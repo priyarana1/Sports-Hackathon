@@ -1,13 +1,14 @@
 // src/components/Rewards.js
 import React, { useState, useEffect } from 'react';
 import './Rewards.css';
+import Loading from "./Loading"; 
 
 function Rewards() {
   const [rewards, setRewards] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/rewards') // Update URL as needed
+    fetch('http://localhost:8000/api/rewards') 
       .then(response => response.json())
       .then(data => {
         setRewards(data);
@@ -19,12 +20,9 @@ function Rewards() {
       });
   }, []);
 
-  if (loading) {
-    return <div>Loading rewards...</div>;
-  }
-
   return (
     <div className="rewards-container">
+      {loading && <Loading />}
       <h2>Your Rewards</h2>
       <div className="rewards-list">
         {rewards.map((reward, index) => (
