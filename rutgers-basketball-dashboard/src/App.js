@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom"; // ❌ Remove BrowserRouter fr
 import { AuthProvider } from "./context/AuthContext";
 import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
-import Register from "./pages/Register";
 import Leaderboard from "./components/Leaderboard";
 import Voting from "./components/VotingApp";
 import GameResults from "./components/GameResults";
@@ -18,7 +17,6 @@ function App() {
       <Routes>
         {/* Public Routes */}
         <Route path="/Login" element={<Login />} />
-        <Route path="/Register" element={<Register />} />
 
         {/* Private Routes */}
         <Route path="/Leaderboard" element={<Leaderboard />} />

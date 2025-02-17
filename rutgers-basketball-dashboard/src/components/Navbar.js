@@ -50,9 +50,6 @@ const Navbar = () => {
               <Link to="/login" onClick={toggleSidebar} className="auth-link">
                 Login
               </Link>
-              <Link to="/register" onClick={toggleSidebar} className="auth-link">
-                Register
-              </Link>
             </div>
           )}
         </div>
