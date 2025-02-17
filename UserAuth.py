@@ -3,7 +3,7 @@ from authlib.integrations.flask_client import OAuth
 import sqlite3
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Replace with a secure key
+app.secret_key = 'your_secret_key'  #replace with secure key
 
 # OAuth Configuration
 oauth = OAuth(app)
@@ -17,7 +17,7 @@ google = oauth.register(
     },
 )
 
-# Initialize database
+#initialize database
 def init_db():
     conn = sqlite3.connect('users.db')
     cursor = conn.cursor()
