@@ -63,7 +63,7 @@ def getData(url, name):
 
 #creata dataframes for each url
 def get_dataframe(url, name):
-    data = getData(url, name) #uses get data function
+    data = getData(url, name) #uses getData function for each url
     if data:
         df = pd.json_normalize(data)
         with open(f"{name}_response.json", "a") as outfile: #outfile so we can see all the information
@@ -73,7 +73,8 @@ def get_dataframe(url, name):
     return None
 
 
-
+#hypothetical: if we had a subscription, we could update this data frame with the current season
+#nested differently than games, so we adjusted the function to fit the json structure
 def get_team_stats(url, name):
     data = getData(url, name)
     if not data:
@@ -94,27 +95,18 @@ def get_team_stats(url, name):
     df.to_json(f"{name}.json", orient="records", indent=4)
     return df
 
-df_rutgers_team_stats = get_team_stats(urlGameStats, "Rutgers Team Stats")
+df_rutgers_team_stats = get_team_stats(urlGameStats, "Rutgers Team Stats") 
 
 
 
 #get the data frames from the data
 df_rutgers_games_2022_2023 = get_dataframe(urlRutgersGames_2022_2023, "Rutgers Games 2022-2023")
 df_rutgers_games_2023_2024 = get_dataframe(urlRutgersGames, "Rutgers Games")
-
-df_rutgers_team_stats = get_dataframe(urlGameStats, "Rutgers Team Stats")
-#df_rutgers_games_current = get_dataframe(urlRutgersGames_current, "Current Season Games") --> not included in subscription
-
-
-
-
-
-
+#df_rutgers_games_current = get_dataframe(urlRutgersGames_current, "Current Season Games") --> not included in subscription, but function would work
 
 
 #change rutgers games dataframe to contain only relevant information
 #college basketball is only played by quarter so q2 and q4 are saved as h1 and h2
-
 #store all available columns in dataframe
 available_columns_games = df_rutgers_games_2023_2024.columns.tolist()
 
@@ -150,7 +142,7 @@ df_rutgers_games_2023_2024.columns = [
    'Home Team: H1 Points', 'Home Team: H2 Points', 'Home Team: Total Points',
    'Away Team: H1 Points', 'Away Team: H2 Points', 'Away Team: Total Points'
 ]
-#check dataframe 
+#check dataframe + print to json file
 df_rutgers_games_2022_2023.to_json("Rutgers_Games_2022_2023.json", orient="records", indent=4) #print df to json file
 df_rutgers_games_2023_2024.to_json("Rutgers_Games_2023_2024.json", orient="records", indent=4) #print df to json file
 

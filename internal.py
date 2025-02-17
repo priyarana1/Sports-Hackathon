@@ -4,7 +4,7 @@ import os
 
 #checks how many requests, ensures we aren't above daily limit
 
-# API endpoint
+#api endpoint
 url = "https://v1.basketball.api-sports.io/status"
 
 apiKey = os.getenv("apiKey") #api key (priya's profile)
