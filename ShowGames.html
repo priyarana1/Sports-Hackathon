@@ -76,7 +76,6 @@
                 <th>H2 Points</th>
                 <th>Total Points</th>
                 <th>Winner</th>
-                <th>Score Comparison</th>
             </tr>
         </thead>
         <tbody id="gamesTable">
@@ -131,17 +130,6 @@
                 row.insertCell(7).innerHTML = `<span style="color:${awayH2 > homeH2 ? 'green' : 'red'}">${awayH2}</span>`;
                 row.insertCell(8).innerHTML = `<span style="color:${awayTotal > homeTotal ? 'green' : 'red'}">${awayTotal}</span>`;
                 row.insertCell(9).innerText = winner;
-
-                // Create score comparison bars
-                const scoreComparisonCell = row.insertCell(10);
-                scoreComparisonCell.className = "bar-container";
-                scoreComparisonCell.innerHTML = `
-                    <div class="bar" style="width: ${homeH1 * 2}px; background-color: blue;"></div>
-                    <div class="bar" style="width: ${homeH2 * 2}px; background-color: lightblue;"></div>
-                    <br>
-                    <div class="bar" style="width: ${awayH1 * 2}px; background-color: red;"></div>
-                    <div class="bar" style="width: ${awayH2 * 2}px; background-color: pink;"></div>
-                `;
 
                 // Collect data for the chart
                 labels.push(homeTeamName + " vs " + awayTeamName);
