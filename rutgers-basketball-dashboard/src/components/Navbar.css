@@ -10,6 +10,7 @@ body {
   .navbar {
     background-color: #CC0000; /* Rutgers Red */
     padding: 20px 40px;
+    font-family: Arial, sans-serif;
     min-height: 80px;
     /* Removed box-shadow to keep top bar flush, or you can keep it if you like */
   }
@@ -38,6 +39,7 @@ body {
     left: -320px; /* SHIFT further left than its width to avoid peek */
     width: 300px;
     height: 100vh;
+    font-family: Arial, sans-serif;
     background-color: #CC0000;
     color: #fff;
     padding: 20px;
