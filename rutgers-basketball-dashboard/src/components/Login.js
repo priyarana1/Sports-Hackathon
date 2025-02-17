@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { login } from '../auth';
 
 function Login({ onLogin }) {
   const [credentials, setCredentials] = useState({ username: '', password: '' });
