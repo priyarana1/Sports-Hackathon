@@ -26,6 +26,12 @@ urlGameStats = "https://v1.basketball.api-sports.io/games/statistics/teams?ids=3
 #2024-2025 season, will keep updating (reoccuring calls to api to update data)
 #the free subscription only includes seasons 2021-2023. in the actual product, we would pay for this feature and users will have updated data
 
+#2024-2025 season, will keep updating (reoccuring calls to api to update data)
+#the free subscription only includes seasons 2021-2023. in the actual product, we would pay for this feature and users will have updated data
+urlRutgersGames_current = f"https://v1.basketball.api-sports.io/games?league={ncaa_league_id}&season={current_season}&team={rutgers_team_id}"
+
+
+
 
 headers = {
     "x-apisports-key": apiKey,

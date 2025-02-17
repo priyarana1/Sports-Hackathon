@@ -1,0 +1,51 @@
+/* src/components/UserProfile.css */
+.profile-container {
+    margin: 20px auto;
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fefefe;
+    border-radius: 8px;
+  }
+  
+  .profile-info {
+    text-align: left;
+  }
+  
+  .profile-info p {
+    margin: 10px 0;
+  }
+  
+  .profile-form {
+    text-align: left;
+  }
+  
+  .profile-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .profile-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .profile-form input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .profile-form button {
+    margin-right: 10px;
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .profile-form button:hover {
+    background-color: #a30000;
+  }
+  

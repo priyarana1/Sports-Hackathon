@@ -1,23 +1,46 @@
-import logo from './logo.svg';
+// src/App.js
+import React from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+import Leaderboard from './components/Leaderboard';
+import PredictionForm from './components/PredictionForm';
+import Voting from './components/VotingApp';
+import Stats from './components/Stats';
+import Rewards from './components/Rewards';
+import UserProfile from './components/UserProfile';
+import Login from './components/Login';
+import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Rutgers Basketball Dashboard</h1>
+        <nav>
+          <ul>
+            <li><Link to="/">Leaderboard</Link></li>
+            <li><Link to="/prediction">Prediction</Link></li>
+            <li><Link to="/voting">Voting</Link></li>
+            <li><Link to="/stats">Stats</Link></li>
+            <li><Link to="/rewards">Rewards</Link></li>
+            <li><Link to="/profile">Profile</Link></li>
+          </ul>
+        </nav>
       </header>
+      <main>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Leaderboard />} />
+          <Route path="/prediction" element={<PredictionForm />} />
+          <Route path="/voting" element={<Voting/>} />
+          <Route path="/stats" element={<Stats />} />
+          <Route path="/rewards" element={<Rewards />} />
+          <Route path="/profile" element={<ProtectedRoute> <UserProfile /> </ProtectedRoute>} />
+        </Routes>
+      </main>
+      <footer>
+        <p>&copy; 2025 Rutgers Basketball</p>
+      </footer>
     </div>
   );
 }
