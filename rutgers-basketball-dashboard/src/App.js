@@ -6,7 +6,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Leaderboard from "./components/Leaderboard";
 import Voting from "./components/VotingApp";
-import Stats from "./components/Stats";
+import GameResults from "./components/GameResults";
+import Standings from "./components/Standings";
 import Rewards from "./components/Rewards";
 import Profile from "./components/UserProfile";
 
@@ -16,15 +17,16 @@ function App() {
       <Navbar />
       <Routes>
         {/* Public Routes */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Register" element={<Register />} />
 
         {/* Private Routes */}
-        <Route path="/leaderboard" element={<Leaderboard />} />
-        <Route path="/voting" element={<Voting />} />
-        <Route path="/stats" element={<Stats />} />
-        <Route path="/rewards" element={<Rewards />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/Leaderboard" element={<Leaderboard />} />
+        <Route path="/Voting" element={<Voting />} />
+        <Route path="/Games" element={<GameResults />} />
+        <Route path="/Standings" element={<Standings />} />
+        <Route path="/Rewards" element={<Rewards />} />
+        <Route path="/Profile" element={<Profile />} />
 
         {/* Default Route */}
         <Route path="/" element={<Leaderboard />} />

@@ -32,11 +32,12 @@ const Navbar = () => {
         <button className="close-btn" onClick={toggleSidebar}>×</button>
         
         <ul className="sidebar-links">
-          <li><Link to="/leaderboard" onClick={toggleSidebar}>Leaderboard</Link></li>
-          <li><Link to="/voting" onClick={toggleSidebar}>Voting</Link></li>
-          <li><Link to="/stats" onClick={toggleSidebar}>Stats</Link></li>
-          <li><Link to="/rewards" onClick={toggleSidebar}>Rewards</Link></li>
-          <li><Link to="/profile" onClick={toggleSidebar}>Profile</Link></li>
+          <li><Link to="/Leaderboard" onClick={toggleSidebar}>Leaderboard</Link></li>
+          <li><Link to="/Voting" onClick={toggleSidebar}>Voting</Link></li>
+          <li><Link to="/Games" onClick={toggleSidebar}>Games</Link></li>
+          <li><Link to="/Standings" onClick={toggleSidebar}>Standings</Link></li>
+          <li><Link to="/Rewards" onClick={toggleSidebar}>Rewards</Link></li>
+          <li><Link to="/Profile" onClick={toggleSidebar}>Profile</Link></li>
         </ul>
 
         <div className="sidebar-auth">

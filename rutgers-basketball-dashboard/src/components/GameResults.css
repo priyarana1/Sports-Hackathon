@@ -1,0 +1,44 @@
+.games-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Heading */
+  .games-page h2 {
+    text-align: left;
+    color: #cc0000;
+  }
+  
+  /* Season toggle */
+  .season-toggle {
+    margin: 10px 0;
+    text-align: left;
+  }
+  
+  .season-toggle select {
+    padding: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Games table */
+  .games-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #fff;
+  }
+  
+  .games-table th,
+  .games-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .games-table th {
+    background-color: #cc0000;
+    color: #fff;
+  }
+  

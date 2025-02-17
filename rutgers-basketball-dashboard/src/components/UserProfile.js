@@ -8,7 +8,6 @@ function UserProfile() {
   const [email, setEmail] = useState("");
   const [editing, setEditing] = useState(false);
 
-  // Load the user’s current info on mount
   useEffect(() => {
     if (user) {
       setName(user.name || "Default User");

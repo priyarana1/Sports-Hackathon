@@ -1,0 +1,86 @@
+/* src/pages/Standings.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: left;
+  }
+  
+  .standings-page {
+    padding: 20px;
+    max-width: 80%;
+    margin: 20px auto;
+  }
+  
+  .standings-page h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* View Toggle */
+  .view-toggle {
+    margin-bottom: 20px;
+  }
+  
+  .view-toggle label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333;
+  }
+  
+  .view-toggle select {
+    padding: 5px 10px;
+    font-size: 1rem;
+  }
+  
+
+  .conference-select {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .conference-select label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333;
+  }
+  
+  .conference-select select {
+    padding: 5px 10px;
+    font-size: 1rem;
+  }
+  
+  .conference-section {
+    margin-bottom: 30px;
+  }
+  
+  .conference-title {
+    margin-bottom: 10px;
+    color: #cc0000;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  
+  .standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .standings-table th,
+  .standings-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .standings-table th {
+    background-color: #cc0000;
+    color: white;
+  }
+  
+  .standings-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
