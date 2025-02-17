@@ -1,37 +1,39 @@
-/* src/App.css */
-.App {
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
-
-.App-header {
-  background-color: #cc0000; /* Rutgers red */
-  color: white;
-  padding: 20px;
-}
-
-.App-header nav ul {
-  list-style-type: none;
+/* Reset some basic styles */
+* {
+  margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+  box-sizing: border-box;
 }
 
-.App-header nav ul li a {
-  color: white;
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* A simple navbar style (if you have a navbar) */
+nav {
+  background-color: #cc0000; /* Rutgers red */
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
   text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
 }
 
-.App-header nav ul li a:hover {
+nav a:hover {
   text-decoration: underline;
 }
 
-main {
-  margin: 20px;
-}
-
-footer {
-  background-color: #f1f1f1;
-  padding: 10px;
+/* A container class for general pages */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 20px;
 }

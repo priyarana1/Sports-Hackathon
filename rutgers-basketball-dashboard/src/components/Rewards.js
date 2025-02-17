@@ -1,6 +1,7 @@
 // src/components/Rewards.js
 import React, { useState, useEffect } from 'react';
 import './Rewards.css';
+import Loading from "./Loading"; 
 
 function Rewards() {
   const [rewards, setRewards] = useState([]);
@@ -19,12 +20,9 @@ function Rewards() {
       });
   }, []);
 
-  if (loading) {
-    return <div>Loading rewards...</div>;
-  }
-
   return (
     <div className="rewards-container">
+      {loading && <Loading />}
       <h2>Your Rewards</h2>
       <div className="rewards-list">
         {rewards.map((reward, index) => (
