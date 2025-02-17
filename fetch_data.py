@@ -4,8 +4,8 @@ import json
 
 # API Credentials
 apiKey = "1ac4a220e607541ff2427fac694a4717"
-apiKey = "b12e1a56d3f6803de2e8961389f6768f"
 apiKey = "5c35bc363365e2c756b76baa578c4719"
+apiKey = "b12e1a56d3f6803de2e8961389f6768f"
 
 
 #general information
@@ -18,15 +18,13 @@ current_season = "2024-2025"
 urlRutgersStandings = f"https://v1.basketball.api-sports.io/standings?league={ncaa_league_id}&season={season}"
 urlRutgersGames = f"https://v1.basketball.api-sports.io/games?league={ncaa_league_id}&season={season}&team={rutgers_team_id}"
 urlRutgersGames_2022_2023 = f"https://v1.basketball.api-sports.io/games?league={ncaa_league_id}&season={"2022-2023"}&team={rutgers_team_id}"
-
-urlRutgersStats = f"https://v1.basketball.api-sports.io/games/statistics/teams?id=2096"
-urlRutgersPlayerStats = f"https://v1.basketball.api-sports.io/games/statistics/players?team={rutgers_team_id}&season={season}"
-
-#2024-2025 season, will keep updating (reoccuring calls to api to update data)
-#the free subscription only includes seasons 2021-2023. in the actual product, we would pay for this feature and users will have updated data
 urlRutgersGames_current = f"https://v1.basketball.api-sports.io/games?league={ncaa_league_id}&season={current_season}&team={rutgers_team_id}"
 
 
+urlGameStats = "https://v1.basketball.api-sports.io/games/statistics/teams?ids=376146-376386-376466-356613-376771"
+
+#2024-2025 season, will keep updating (reoccuring calls to api to update data)
+#the free subscription only includes seasons 2021-2023. in the actual product, we would pay for this feature and users will have updated data
 
 
 headers = {
@@ -70,22 +68,42 @@ def get_dataframe(url, name):
 
 
 
+def get_team_stats(url, name):
+    data = getData(url, name)
+    if not data:
+        return None
+    
+    team_stats = {
+        "Team Name": data["team"]["name"],
+        "Games Played": data["games"]["played"]["all"],
+        "Wins": data["games"]["wins"]["all"]["total"],
+        "Losses": data["games"]["loses"]["all"]["total"],
+        "Points For": data["points"]["for"]["total"]["all"],
+        "Points Against": data["points"]["against"]["total"]["all"],
+        "Avg Points Scored": data["points"]["for"]["average"]["all"],
+        "Avg Points Allowed": data["points"]["against"]["average"]["all"]
+    }
+    
+    df = pd.DataFrame([team_stats])
+    df.to_json(f"{name}.json", orient="records", indent=4)
+    return df
+
+df_rutgers_team_stats = get_team_stats(urlGameStats, "Rutgers Team Stats")
 
 
 
 #get the data frames from the data
-df_ncaa_standings = get_dataframe(urlRutgersStandings, "NCAA Standings")
-df_rutgers_games_2023_2024 = get_dataframe(urlRutgersGames, "Rutgers Games")
-df_rutgers_team_stats = get_dataframe(urlRutgersStats, "Rutgers Team Stats")
-df_rutgers_player_stats = get_dataframe(urlRutgersPlayerStats, "Rutgers Player Stats")
 df_rutgers_games_2022_2023 = get_dataframe(urlRutgersGames_2022_2023, "Rutgers Games 2022-2023")
+df_rutgers_games_2023_2024 = get_dataframe(urlRutgersGames, "Rutgers Games")
+
+df_rutgers_team_stats = get_dataframe(urlGameStats, "Rutgers Team Stats")
 #df_rutgers_games_current = get_dataframe(urlRutgersGames_current, "Current Season Games") --> not included in subscription
 
 
-#print(df_rutgers_team_stats)
 
 
-#df_ncaa_standings.to_json("NCAA Standings 2023-2024", orient="records", indent=4) #print ncaa standings df to json file)
+
+
 
 
 #change rutgers games dataframe to contain only relevant information
