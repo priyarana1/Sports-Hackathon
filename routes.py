@@ -61,25 +61,19 @@ def login():
 
     return jsonify({"error": "Invalid username or password"}), 401
 
-# 🚀 Logout Route (JWT Blacklist)
+# let user log out
 @app.route("/logout", methods=["POST"])
 @jwt_required()
 def logout():
-    jti = get_jwt()["jti"]  # Get token identifier
-    revoked_tokens.add(jti)  # Blacklist the token
+    jti = get_jwt()["jti"]  # token id
+    revoked_tokens.add(jti)  # get rid of token
     return jsonify({"message": "Logged out successfully"}), 200
 
-# 🚀 JWT Token Revocation Check
+# JWT token check
 @jwt.token_in_blocklist_loader
 def check_if_token_is_revoked(jwt_header, jwt_payload):
-    return jwt_payload["jti"] in revoked_tokens  # Check if token is revoked
+    return jwt_payload["jti"] in revoked_tokens 
 
-# 🚀 Protected Route (Example)
-@app.route("/protected", methods=["GET"])
-@jwt_required()
-def protected():
-    current_user_id = get_jwt_identity()
-    return jsonify({"message": f"Hello, User {current_user_id}! You have access."}), 200
 
 # 🚀 Run the app
 if __name__ == "__main__":
