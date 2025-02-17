@@ -34,26 +34,49 @@
         }
         .winner {
             font-weight: bold;
-            color: #4CAF50;
+            color: green;
         }
         .loser {
             color: red;
         }
+        #myChart {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .bar-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .bar {
+            height: 10px;
+            margin: 0 2px;
+        }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
     <h1>Basketball Game Results</h1>
+    <select id="seasonToggle">
+        <option value="2023">2023-2024 Season</option>
+        <option value="2024">2022-2023 Season</option>
+    </select>
+
     <table>
         <thead>
             <tr>
                 <th>Date</th>
                 <th>Home Team</th>
-                <th></th>
-                <th>Score</th>
-                <th></th>
+                <th>H1 Points</th>
+                <th>H2 Points</th>
+                <th>Total Points</th>
                 <th>Away Team</th>
+                <th>H1 Points</th>
+                <th>H2 Points</th>
+                <th>Total Points</th>
                 <th>Winner</th>
+                <th>Score Comparison</th>
             </tr>
         </thead>
         <tbody id="gamesTable">
@@ -61,34 +84,114 @@
         </tbody>
     </table>
 
+    <canvas id="myChart"></canvas>
+
     <script>
-        async function fetchGames() {
-            const response = await fetch("API_LINK_HERE"); // Replace with actual API URL
+        const fetchGames = async (season) => {
+            const url = season === "2023" 
+                ? "https://raw.githubusercontent.com/priyarana1/Sports-Hackathon/main/Rutgers_Games_2023_2024.json" 
+                : "https://raw.githubusercontent.com/priyarana1/Sports-Hackathon/main/Rutgers_Games_2022_2023.json"; // Replace with actual API URL for 2024
+            const response = await fetch(url);
             const games = await response.json();
 
             const tableBody = document.getElementById("gamesTable");
             tableBody.innerHTML = "";
 
+            const labels = [];
+            const homePoints = [];
+            const awayPoints = [];
+
             games.forEach(game => {
-                const winner = game["Home Team: Total Points"] > game["Away Team: Total Points"] ? game["Home Team"] : game["Away Team"];
+                const row = tableBody.insertRow();
+                row.insertCell(0).innerText = new Date(game.Data).toLocaleDateString();
                 
-                const row = `
-                    <tr>
-                        <td>${new Date(game.Data).toLocaleDateString()}</td>
-                        <td>${game["Home Team"]}</td>
-                        <td><img src="${game["Home Team Logo"]}" alt="Home Team Logo"></td>
-                        <td>${game["Home Team: Total Points"]} - ${game["Away Team: Total Points"]}</td>
-                        <td><img src="${game["Away Team Logo"]}" alt="Away Team Logo"></td>
-                        <td>${game["Away Team"]}</td>
-                        <td class="${winner === game["Home Team"] ? 'winner' : 'loser'}">${winner}</td>
-                    </tr>
+                const homeTeamName = game["Home Team"];
+                const awayTeamName = game["Away Team"];
+                
+                const homeH1 = game["Home Team: H1 Points"];
+                const homeH2 = game["Home Team: H2 Points"];
+                const homeTotal = game["Home Team: Total Points"];
+                
+                const awayH1 = game["Away Team: H1 Points"];
+                const awayH2 = game["Away Team: H2 Points"];
+                const awayTotal = game["Away Team: Total Points"];
+                
+                // Determine winner
+                const winner = homeTotal > awayTotal ? homeTeamName : awayTeamName;
+                
+                // Insert Home Team with color coding
+                row.insertCell(1).innerHTML = `<span style="color:${homeTotal > awayTotal ? 'green' : 'red'}">${homeTeamName}</span>`;
+                row.insertCell(2).innerHTML = `<span style="color:${homeH1 > awayH1 ? 'green' : 'red'}">${homeH1}</span>`;
+                row.insertCell(3).innerHTML = `<span style="color:${homeH2 > awayH2 ? 'green' : 'red'}">${homeH2}</span>`;
+                row.insertCell(4).innerHTML = `<span style="color:${homeTotal > awayTotal ? 'green' : 'red'}">${homeTotal}</span>`;
+                
+                // Insert Away Team with color coding
+                row.insertCell(5).innerHTML = `<span style="color:${awayTotal > homeTotal ? 'green' : 'red'}">${awayTeamName}</span>`;
+                row.insertCell(6).innerHTML = `<span style="color:${awayH1 > homeH1 ? 'green' : 'red'}">${awayH1}</span>`;
+                row.insertCell(7).innerHTML = `<span style="color:${awayH2 > homeH2 ? 'green' : 'red'}">${awayH2}</span>`;
+                row.insertCell(8).innerHTML = `<span style="color:${awayTotal > homeTotal ? 'green' : 'red'}">${awayTotal}</span>`;
+                row.insertCell(9).innerText = winner;
+
+                // Create score comparison bars
+                const scoreComparisonCell = row.insertCell(10);
+                scoreComparisonCell.className = "bar-container";
+                scoreComparisonCell.innerHTML = `
+                    <div class="bar" style="width: ${homeH1 * 2}px; background-color: blue;"></div>
+                    <div class="bar" style="width: ${homeH2 * 2}px; background-color: lightblue;"></div>
+                    <br>
+                    <div class="bar" style="width: ${awayH1 * 2}px; background-color: red;"></div>
+                    <div class="bar" style="width: ${awayH2 * 2}px; background-color: pink;"></div>
                 `;
-                tableBody.innerHTML += row;
+
+                // Collect data for the chart
+                labels.push(homeTeamName + " vs " + awayTeamName);
+                homePoints.push(homeTotal);
+                awayPoints.push(awayTotal);
+            });
+
+            createChart(labels, homePoints, awayPoints);
+        }
+
+        function createChart(labels, homePoints, awayPoints) {
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Home Team Points',
+                            data: homePoints,
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Away Team Points',
+                            data: awayPoints,
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
             });
         }
 
-        fetchGames();
-    </script>
+        // Initial fetch for the 2023 season
+        fetchGames("2023");
 
+        // Event listener for the season toggle
+        document.getElementById("seasonToggle").addEventListener("change", (event) => {
+            fetchGames(event.target.value);
+        });
+    </script>
 </body>
 </html>
