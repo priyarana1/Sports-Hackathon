@@ -1,0 +1,13 @@
+{
+    "get": "games",
+    "parameters": {
+        "team": "2096",
+        "season": "2023-2024"
+    },
+    "errors": {
+        "player": "The Player field is required.",
+        "team": "The Team field do not exist."
+    },
+    "results": 0,
+    "response": []
+}

@@ -1,0 +1,1968 @@
+{
+    "get": "games",
+    "parameters": {
+        "league": "116",
+        "season": "2022-2023",
+        "team": "2096"
+    },
+    "errors": [],
+    "results": 33,
+    "response": [
+        {
+            "id": 333865,
+            "date": "2022-11-08T00:00:00+00:00",
+            "time": "00:00",
+            "timestamp": 1667865600,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 1871,
+                    "name": "Columbia",
+                    "logo": "https://media.api-sports.io/basketball/teams/1871.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 31,
+                    "quarter_3": 0,
+                    "quarter_4": 44,
+                    "over_time": null,
+                    "total": 75
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 21,
+                    "quarter_3": 0,
+                    "quarter_4": 14,
+                    "over_time": null,
+                    "total": 35
+                }
+            }
+        },
+        {
+            "id": 334102,
+            "date": "2022-11-11T00:00:00+00:00",
+            "time": "00:00",
+            "timestamp": 1668124800,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 2102,
+                    "name": "Sacred Heart",
+                    "logo": "https://media.api-sports.io/basketball/teams/2102.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 46,
+                    "quarter_3": 0,
+                    "quarter_4": 42,
+                    "over_time": null,
+                    "total": 88
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 25,
+                    "quarter_3": 0,
+                    "quarter_4": 25,
+                    "over_time": null,
+                    "total": 50
+                }
+            }
+        },
+        {
+            "id": 334242,
+            "date": "2022-11-12T19:00:00+00:00",
+            "time": "19:00",
+            "timestamp": 1668279600,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 2169,
+                    "name": "UMass Lowell",
+                    "logo": "https://media.api-sports.io/basketball/teams/2169.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 34,
+                    "quarter_3": 0,
+                    "quarter_4": 39,
+                    "over_time": null,
+                    "total": 73
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 21,
+                    "quarter_3": 0,
+                    "quarter_4": 44,
+                    "over_time": null,
+                    "total": 65
+                }
+            }
+        },
+        {
+            "id": 334558,
+            "date": "2022-11-18T22:00:00+00:00",
+            "time": "22:00",
+            "timestamp": 1668808800,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 2140,
+                    "name": "Temple",
+                    "logo": "https://media.api-sports.io/basketball/teams/2140.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 23,
+                    "quarter_3": 0,
+                    "quarter_4": 43,
+                    "over_time": null,
+                    "total": 66
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 38,
+                    "quarter_3": 0,
+                    "quarter_4": 34,
+                    "over_time": null,
+                    "total": 72
+                }
+            }
+        },
+        {
+            "id": 334791,
+            "date": "2022-11-23T00:00:00+00:00",
+            "time": "00:00",
+            "timestamp": 1669161600,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 2093,
+                    "name": "Rider",
+                    "logo": "https://media.api-sports.io/basketball/teams/2093.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 35,
+                    "quarter_3": 0,
+                    "quarter_4": 41,
+                    "over_time": null,
+                    "total": 76
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 23,
+                    "quarter_3": 0,
+                    "quarter_4": 23,
+                    "over_time": null,
+                    "total": 46
+                }
+            }
+        },
+        {
+            "id": 334973,
+            "date": "2022-11-26T20:00:00+00:00",
+            "time": "20:00",
+            "timestamp": 1669492800,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 1856,
+                    "name": "Central Connecticut State",
+                    "logo": "https://media.api-sports.io/basketball/teams/1856.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 44,
+                    "quarter_3": 0,
+                    "quarter_4": 39,
+                    "over_time": null,
+                    "total": 83
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 24,
+                    "quarter_3": 0,
+                    "quarter_4": 25,
+                    "over_time": null,
+                    "total": 49
+                }
+            }
+        },
+        {
+            "id": 335177,
+            "date": "2022-12-01T00:15:00+00:00",
+            "time": "00:15",
+            "timestamp": 1669853700,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 1993,
+                    "name": "Miami (FL)",
+                    "logo": "https://media.api-sports.io/basketball/teams/1993.png"
+                },
+                "away": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 33,
+                    "quarter_3": 0,
+                    "quarter_4": 35,
+                    "over_time": null,
+                    "total": 68
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 34,
+                    "quarter_3": 0,
+                    "quarter_4": 27,
+                    "over_time": null,
+                    "total": 61
+                }
+            }
+        },
+        {
+            "id": 335313,
+            "date": "2022-12-03T21:00:00+00:00",
+            "time": "21:00",
+            "timestamp": 1670101200,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 189,
+                    "name": "Indiana",
+                    "logo": "https://media.api-sports.io/basketball/teams/189.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 31,
+                    "quarter_3": 0,
+                    "quarter_4": 32,
+                    "over_time": null,
+                    "total": 63
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 24,
+                    "quarter_3": 0,
+                    "quarter_4": 24,
+                    "over_time": null,
+                    "total": 48
+                }
+            }
+        },
+        {
+            "id": 335544,
+            "date": "2022-12-09T00:00:00+00:00",
+            "time": "00:00",
+            "timestamp": 1670544000,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2058,
+                    "name": "Ohio State",
+                    "logo": "https://media.api-sports.io/basketball/teams/2058.png"
+                },
+                "away": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 31,
+                    "quarter_3": 0,
+                    "quarter_4": 36,
+                    "over_time": null,
+                    "total": 67
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 29,
+                    "quarter_3": 0,
+                    "quarter_4": 37,
+                    "over_time": null,
+                    "total": 66
+                }
+            }
+        },
+        {
+            "id": 335715,
+            "date": "2022-12-11T23:30:00+00:00",
+            "time": "23:30",
+            "timestamp": 1670801400,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 2112,
+                    "name": "Seton Hall",
+                    "logo": "https://media.api-sports.io/basketball/teams/2112.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 26,
+                    "quarter_3": 0,
+                    "quarter_4": 17,
+                    "over_time": null,
+                    "total": 43
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 22,
+                    "quarter_3": 0,
+                    "quarter_4": 23,
+                    "over_time": null,
+                    "total": 45
+                }
+            }
+        },
+        {
+            "id": 335841,
+            "date": "2022-12-17T17:00:00+00:00",
+            "time": "17:00",
+            "timestamp": 1671296400,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 2192,
+                    "name": "Wake Forest",
+                    "logo": "https://media.api-sports.io/basketball/teams/2192.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 43,
+                    "quarter_3": 0,
+                    "quarter_4": 38,
+                    "over_time": null,
+                    "total": 81
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 33,
+                    "quarter_3": 0,
+                    "quarter_4": 24,
+                    "over_time": null,
+                    "total": 57
+                }
+            }
+        },
+        {
+            "id": 336203,
+            "date": "2022-12-23T22:00:00+00:00",
+            "time": "22:00",
+            "timestamp": 1671832800,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 1844,
+                    "name": "Bucknell",
+                    "logo": "https://media.api-sports.io/basketball/teams/1844.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 44,
+                    "quarter_3": 0,
+                    "quarter_4": 41,
+                    "over_time": null,
+                    "total": 85
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 26,
+                    "quarter_3": 0,
+                    "quarter_4": 24,
+                    "over_time": null,
+                    "total": 50
+                }
+            }
+        },
+        {
+            "id": 336322,
+            "date": "2022-12-31T01:00:00+00:00",
+            "time": "01:00",
+            "timestamp": 1672448400,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 1878,
+                    "name": "Coppin State",
+                    "logo": "https://media.api-sports.io/basketball/teams/1878.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 51,
+                    "quarter_3": 0,
+                    "quarter_4": 39,
+                    "over_time": null,
+                    "total": 90
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 27,
+                    "quarter_3": 0,
+                    "quarter_4": 30,
+                    "over_time": null,
+                    "total": 57
+                }
+            }
+        },
+        {
+            "id": 336414,
+            "date": "2023-01-03T00:00:00+00:00",
+            "time": "00:00",
+            "timestamp": 1672704000,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2085,
+                    "name": "Purdue",
+                    "logo": "https://media.api-sports.io/basketball/teams/2085.png"
+                },
+                "away": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 24,
+                    "quarter_3": 0,
+                    "quarter_4": 40,
+                    "over_time": null,
+                    "total": 64
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 34,
+                    "quarter_3": 0,
+                    "quarter_4": 31,
+                    "over_time": null,
+                    "total": 65
+                }
+            }
+        },
+        {
+            "id": 336514,
+            "date": "2023-01-05T23:30:00+00:00",
+            "time": "23:30",
+            "timestamp": 1672961400,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 1985,
+                    "name": "Maryland",
+                    "logo": "https://media.api-sports.io/basketball/teams/1985.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 24,
+                    "quarter_3": 0,
+                    "quarter_4": 40,
+                    "over_time": null,
+                    "total": 64
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 17,
+                    "quarter_3": 0,
+                    "quarter_4": 33,
+                    "over_time": null,
+                    "total": 50
+                }
+            }
+        },
+        {
+            "id": 336667,
+            "date": "2023-01-08T17:00:00+00:00",
+            "time": "17:00",
+            "timestamp": 1673197200,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 1950,
+                    "name": "Iowa",
+                    "logo": "https://media.api-sports.io/basketball/teams/1950.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 30,
+                    "quarter_3": 0,
+                    "quarter_4": 35,
+                    "over_time": null,
+                    "total": 65
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 42,
+                    "quarter_3": 0,
+                    "quarter_4": 34,
+                    "over_time": null,
+                    "total": 76
+                }
+            }
+        },
+        {
+            "id": 336763,
+            "date": "2023-01-12T02:00:00+00:00",
+            "time": "02:00",
+            "timestamp": 1673488800,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2053,
+                    "name": "Northwestern",
+                    "logo": "https://media.api-sports.io/basketball/teams/2053.png"
+                },
+                "away": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 24,
+                    "quarter_3": 0,
+                    "quarter_4": 38,
+                    "over_time": null,
+                    "total": 62
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 29,
+                    "quarter_3": 0,
+                    "quarter_4": 36,
+                    "over_time": null,
+                    "total": 65
+                }
+            }
+        },
+        {
+            "id": 336912,
+            "date": "2023-01-15T19:15:00+00:00",
+            "time": "19:15",
+            "timestamp": 1673810100,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "After Over Time",
+                "short": "AOT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 2058,
+                    "name": "Ohio State",
+                    "logo": "https://media.api-sports.io/basketball/teams/2058.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 20,
+                    "quarter_3": 0,
+                    "quarter_4": 37,
+                    "over_time": 11,
+                    "total": 68
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 23,
+                    "quarter_3": 0,
+                    "quarter_4": 34,
+                    "over_time": 7,
+                    "total": 64
+                }
+            }
+        },
+        {
+            "id": 337018,
+            "date": "2023-01-19T23:30:00+00:00",
+            "time": "23:30",
+            "timestamp": 1674171000,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 1995,
+                    "name": "Michigan State",
+                    "logo": "https://media.api-sports.io/basketball/teams/1995.png"
+                },
+                "away": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 36,
+                    "quarter_3": 0,
+                    "quarter_4": 34,
+                    "over_time": null,
+                    "total": 70
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 30,
+                    "quarter_3": 0,
+                    "quarter_4": 27,
+                    "over_time": null,
+                    "total": 57
+                }
+            }
+        },
+        {
+            "id": 337192,
+            "date": "2023-01-24T23:30:00+00:00",
+            "time": "23:30",
+            "timestamp": 1674603000,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 2073,
+                    "name": "Penn State",
+                    "logo": "https://media.api-sports.io/basketball/teams/2073.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 32,
+                    "quarter_3": 0,
+                    "quarter_4": 33,
+                    "over_time": null,
+                    "total": 65
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 24,
+                    "quarter_3": 0,
+                    "quarter_4": 21,
+                    "over_time": null,
+                    "total": 45
+                }
+            }
+        },
+        {
+            "id": 337401,
+            "date": "2023-01-29T19:00:00+00:00",
+            "time": "19:00",
+            "timestamp": 1675018800,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 1950,
+                    "name": "Iowa",
+                    "logo": "https://media.api-sports.io/basketball/teams/1950.png"
+                },
+                "away": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 45,
+                    "quarter_3": 0,
+                    "quarter_4": 48,
+                    "over_time": null,
+                    "total": 93
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 34,
+                    "quarter_3": 0,
+                    "quarter_4": 48,
+                    "over_time": null,
+                    "total": 82
+                }
+            }
+        },
+        {
+            "id": 337490,
+            "date": "2023-02-02T01:30:00+00:00",
+            "time": "01:30",
+            "timestamp": 1675301400,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 2003,
+                    "name": "Minnesota",
+                    "logo": "https://media.api-sports.io/basketball/teams/2003.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 34,
+                    "quarter_3": 0,
+                    "quarter_4": 56,
+                    "over_time": null,
+                    "total": 90
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 24,
+                    "quarter_3": 0,
+                    "quarter_4": 31,
+                    "over_time": null,
+                    "total": 55
+                }
+            }
+        },
+        {
+            "id": 337572,
+            "date": "2023-02-04T17:00:00+00:00",
+            "time": "17:00",
+            "timestamp": 1675530000,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 1995,
+                    "name": "Michigan State",
+                    "logo": "https://media.api-sports.io/basketball/teams/1995.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 19,
+                    "quarter_3": 0,
+                    "quarter_4": 42,
+                    "over_time": null,
+                    "total": 61
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 25,
+                    "quarter_3": 0,
+                    "quarter_4": 30,
+                    "over_time": null,
+                    "total": 55
+                }
+            }
+        },
+        {
+            "id": 338247,
+            "date": "2023-02-07T23:30:00+00:00",
+            "time": "23:30",
+            "timestamp": 1675812600,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 189,
+                    "name": "Indiana",
+                    "logo": "https://media.api-sports.io/basketball/teams/189.png"
+                },
+                "away": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 38,
+                    "quarter_3": 0,
+                    "quarter_4": 28,
+                    "over_time": null,
+                    "total": 66
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 35,
+                    "quarter_3": 0,
+                    "quarter_4": 25,
+                    "over_time": null,
+                    "total": 60
+                }
+            }
+        },
+        {
+            "id": 339000,
+            "date": "2023-02-11T19:00:00+00:00",
+            "time": "19:00",
+            "timestamp": 1676142000,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 1944,
+                    "name": "Illinois",
+                    "logo": "https://media.api-sports.io/basketball/teams/1944.png"
+                },
+                "away": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 30,
+                    "quarter_3": 0,
+                    "quarter_4": 39,
+                    "over_time": null,
+                    "total": 69
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 34,
+                    "quarter_3": 0,
+                    "quarter_4": 26,
+                    "over_time": null,
+                    "total": 60
+                }
+            }
+        },
+        {
+            "id": 341076,
+            "date": "2023-02-15T01:00:00+00:00",
+            "time": "01:00",
+            "timestamp": 1676422800,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 195,
+                    "name": "Nebraska",
+                    "logo": "https://media.api-sports.io/basketball/teams/195.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 35,
+                    "quarter_3": 0,
+                    "quarter_4": 37,
+                    "over_time": null,
+                    "total": 72
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 40,
+                    "quarter_3": 0,
+                    "quarter_4": 42,
+                    "over_time": null,
+                    "total": 82
+                }
+            }
+        },
+        {
+            "id": 341882,
+            "date": "2023-02-18T17:00:00+00:00",
+            "time": "17:00",
+            "timestamp": 1676739600,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2214,
+                    "name": "Wisconsin",
+                    "logo": "https://media.api-sports.io/basketball/teams/2214.png"
+                },
+                "away": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 34,
+                    "quarter_3": 0,
+                    "quarter_4": 23,
+                    "over_time": null,
+                    "total": 57
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 36,
+                    "quarter_3": 0,
+                    "quarter_4": 22,
+                    "over_time": null,
+                    "total": 58
+                }
+            }
+        },
+        {
+            "id": 343289,
+            "date": "2023-02-24T01:30:00+00:00",
+            "time": "01:30",
+            "timestamp": 1677202200,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 1994,
+                    "name": "Michigan",
+                    "logo": "https://media.api-sports.io/basketball/teams/1994.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 23,
+                    "quarter_3": 0,
+                    "quarter_4": 22,
+                    "over_time": null,
+                    "total": 45
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 26,
+                    "quarter_3": 0,
+                    "quarter_4": 32,
+                    "over_time": null,
+                    "total": 58
+                }
+            }
+        },
+        {
+            "id": 344143,
+            "date": "2023-02-26T23:30:00+00:00",
+            "time": "23:30",
+            "timestamp": 1677454200,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2073,
+                    "name": "Penn State",
+                    "logo": "https://media.api-sports.io/basketball/teams/2073.png"
+                },
+                "away": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 31,
+                    "quarter_3": 0,
+                    "quarter_4": 25,
+                    "over_time": null,
+                    "total": 56
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 21,
+                    "quarter_3": 0,
+                    "quarter_4": 38,
+                    "over_time": null,
+                    "total": 59
+                }
+            }
+        },
+        {
+            "id": 344378,
+            "date": "2023-03-03T00:00:00+00:00",
+            "time": "00:00",
+            "timestamp": 1677801600,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2003,
+                    "name": "Minnesota",
+                    "logo": "https://media.api-sports.io/basketball/teams/2003.png"
+                },
+                "away": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 33,
+                    "quarter_3": 0,
+                    "quarter_4": 42,
+                    "over_time": null,
+                    "total": 75
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 40,
+                    "quarter_3": 0,
+                    "quarter_4": 34,
+                    "over_time": null,
+                    "total": 74
+                }
+            }
+        },
+        {
+            "id": 345251,
+            "date": "2023-03-06T00:30:00+00:00",
+            "time": "00:30",
+            "timestamp": 1678062600,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                },
+                "away": {
+                    "id": 2053,
+                    "name": "Northwestern",
+                    "logo": "https://media.api-sports.io/basketball/teams/2053.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 21,
+                    "quarter_3": 0,
+                    "quarter_4": 32,
+                    "over_time": null,
+                    "total": 53
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 25,
+                    "quarter_3": 0,
+                    "quarter_4": 40,
+                    "over_time": null,
+                    "total": 65
+                }
+            }
+        },
+        {
+            "id": 345655,
+            "date": "2023-03-09T17:00:00+00:00",
+            "time": "17:00",
+            "timestamp": 1678381200,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 1994,
+                    "name": "Michigan",
+                    "logo": "https://media.api-sports.io/basketball/teams/1994.png"
+                },
+                "away": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 28,
+                    "quarter_3": 0,
+                    "quarter_4": 22,
+                    "over_time": null,
+                    "total": 50
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 25,
+                    "quarter_3": 0,
+                    "quarter_4": 37,
+                    "over_time": null,
+                    "total": 62
+                }
+            }
+        },
+        {
+            "id": 345706,
+            "date": "2023-03-10T17:00:00+00:00",
+            "time": "17:00",
+            "timestamp": 1678467600,
+            "timezone": "UTC",
+            "stage": null,
+            "week": null,
+            "venue": null,
+            "status": {
+                "long": "Game Finished",
+                "short": "FT",
+                "timer": null
+            },
+            "league": {
+                "id": 116,
+                "name": "NCAA",
+                "type": "League",
+                "season": "2022-2023",
+                "logo": "https://media.api-sports.io/basketball/leagues/116.png"
+            },
+            "country": {
+                "id": 5,
+                "name": "USA",
+                "code": "US",
+                "flag": "https://media.api-sports.io/flags/us.svg"
+            },
+            "teams": {
+                "home": {
+                    "id": 2085,
+                    "name": "Purdue",
+                    "logo": "https://media.api-sports.io/basketball/teams/2085.png"
+                },
+                "away": {
+                    "id": 2096,
+                    "name": "Rutgers",
+                    "logo": "https://media.api-sports.io/basketball/teams/2096.png"
+                }
+            },
+            "scores": {
+                "home": {
+                    "quarter_1": 0,
+                    "quarter_2": 29,
+                    "quarter_3": 0,
+                    "quarter_4": 41,
+                    "over_time": null,
+                    "total": 70
+                },
+                "away": {
+                    "quarter_1": 0,
+                    "quarter_2": 28,
+                    "quarter_3": 0,
+                    "quarter_4": 37,
+                    "over_time": null,
+                    "total": 65
+                }
+            }
+        }
+    ]
+}
+
+✅ Available Columns:
+[
+    "id",
+    "date",
+    "time",
+    "timestamp",
+    "timezone",
+    "stage",
+    "week",
+    "venue",
+    "status.long",
+    "status.short",
+    "status.timer",
+    "league.id",
+    "league.name",
+    "league.type",
+    "league.season",
+    "league.logo",
+    "country.id",
+    "country.name",
+    "country.code",
+    "country.flag",
+    "teams.home.id",
+    "teams.home.name",
+    "teams.home.logo",
+    "teams.away.id",
+    "teams.away.name",
+    "teams.away.logo",
+    "scores.home.quarter_1",
+    "scores.home.quarter_2",
+    "scores.home.quarter_3",
+    "scores.home.quarter_4",
+    "scores.home.over_time",
+    "scores.home.total",
+    "scores.away.quarter_1",
+    "scores.away.quarter_2",
+    "scores.away.quarter_3",
+    "scores.away.quarter_4",
+    "scores.away.over_time",
+    "scores.away.total"
+]

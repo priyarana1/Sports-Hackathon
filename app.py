@@ -46,5 +46,25 @@ def authorized():
     user_info = google.parse_id_token(token, nonce=session["nonce"])
     return f"Logged in as: {user_info['email']}"
 
+# FROM ROUTES>\.PY
+
+from routes import routes_bp, db, login_manager
+
+# Configure SQLite Database
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///users.db"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+# Initialize extensions
+db.init_app(app)
+login_manager.init_app(app)
+
+# Register Blueprint
+app.register_blueprint(routes_bp)
+
+# Create database tables
+with app.app_context():
+    db.create_all()
+
+
 if __name__ == "__main__":
     app.run(debug=True)
