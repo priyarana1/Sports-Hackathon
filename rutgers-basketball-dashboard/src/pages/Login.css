@@ -1,60 +1,76 @@
-/* src/pages/Login.css */
-
+/* Login.css */
 .login-container {
     max-width: 400px;
-    margin: 40px auto; /* centers the form */
-    padding: 20px;
+    margin: 60px auto;
+    padding: 30px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    animation: fadeIn 0.5s ease;
   }
   
-  .login-title {
-    margin-bottom: 20px;
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .form-title {
     text-align: center;
-    color: #CC0000; /* Rutgers Red */
-    font-size: 1.8rem;
-    font-weight: bold;
+    color: #CC0000;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 600;
   }
   
-  .login-error {
-    color: red;
+  .error-message {
+    color: #ff4d4f;
     text-align: center;
     margin-bottom: 10px;
   }
   
-  .login-form .form-group {
-    margin-bottom: 15px;
+  .success-message {
+    color: #52c41a;
+    text-align: center;
+    margin-bottom: 10px;
   }
   
-  .login-form label {
-    display: block;
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-group label {
     margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: 600;
     color: #333;
   }
   
-  .login-form input {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .login-button {
-    width: 100%;
+  .input-group input {
     padding: 10px;
-    background-color: #CC0000; /* Rutgers Red */
-    color: #fff;
-    border: none;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 6px;
     font-size: 1rem;
   }
   
-  .login-button:hover {
-    background-color: #a30000; /* darker red */
+  .submit-button {
+    padding: 12px;
+    background-color: #CC0000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #a30000;
   }
   
