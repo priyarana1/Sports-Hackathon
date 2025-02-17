@@ -1,27 +1,30 @@
 // src/pages/Login.js
 import React, { useState, useContext } from "react";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { auth } from "../firebase/config"; // You'll need to create this
 import AuthContext from "../context/AuthContext";
 import Loading from "../components/Loading";
 import "./Login.css";
 
 const Login = () => {
   const { login } = useContext(AuthContext);
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleGoogleSignIn = async () => {
     setLoading(true);
     try {
-      const response = await login(username, password);
-      if (response.access_token) {
-      } else {
-        setError(response.error || "Invalid credentials");
+      const provider = new GoogleAuthProvider();
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      // You can handle the successful login here
+      // For example, you might want to call your login context method
+      if (user) {
+        await login(user);
       }
     } catch (err) {
-      setError("An error occurred. Please try again.");
+      setError("Failed to sign in with Google. Please try again.");
+      console.error(err);
     } finally {
       setLoading(false);
     }
@@ -32,29 +35,12 @@ const Login = () => {
       {loading && <Loading />}
       <h2 className="form-title">Login</h2>
       {error && <p className="error-message">{error}</p>}
-      <form onSubmit={handleSubmit} className="form">
-        <div className="input-group">
-          <label htmlFor="username">Username</label>
-          <input 
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required 
-          />
-        </div>
-        <div className="input-group">
-          <label htmlFor="password">Password</label>
-          <input 
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required 
-          />
-        </div>
-        <button type="submit" className="submit-button">Login</button>
-      </form>
+      <button 
+        onClick={handleGoogleSignIn} 
+        className="google-sign-in-button"
+      >
+        Sign in with Google
+      </button>
     </div>
   );
 };
