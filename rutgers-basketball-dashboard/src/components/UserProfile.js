@@ -1,110 +1,84 @@
-// src/components/UserProfile.js
-import React, { useState, useEffect } from 'react';
-import './UserProfile.css';
-import Loading from "./Loading"; 
+import React, { useState, useContext, useEffect } from "react";
+import AuthContext from "../context/AuthContext";
+import "./UserProfile.css";
 
 function UserProfile() {
-  const [profile, setProfile] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const { user } = useContext(AuthContext);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [editing, setEditing] = useState(false);
-  const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-  });
-  const token = localStorage.getItem('authToken');
 
-
+  // Load the user’s current info on mount
   useEffect(() => {
-    fetch('http://localhost:8000/api/user', {
-      headers: { Authorization: `Bearer ${token}` },
-    })
-      .then(response => response.json())
-      .then(data => {
-        setProfile(data);
-        setFormState({ name: data.name, email: data.email, });
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error("Error fetching user profile:", error);
-        setLoading(false);
-      });
-  }, [token]);
-
+    if (user) {
+      setName(user.name || "Default User");
+      setEmail(user.email || "default@example.com");
+    }
+  }, [user]);
 
   const handleEditToggle = () => {
     setEditing(!editing);
   };
 
-  const handleChange = (e) => {
-    setFormState({ ...formState, [e.target.name]: e.target.value });
+  const handleSave = () => {
+    // Here you’d call your update user API or context function
+    console.log("Saving new name:", name, "and email:", email);
+    // e.g., updateUserProfile(name, email)
+    setEditing(false);
   };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    fetch('http://localhost:8000/api/user', {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify(formState)
-    })
-      .then(response => response.json())
-      .then(data => {
-        setProfile(data);
-        setEditing(false);
-      })
-      .catch(error => {
-        console.error("Error updating profile:", error);
-      });
-  };
-
-  const handleLogout = () => {
-    localStorage.removeItem('authToken');
-    window.location.href = '/login';
-  };
-
-  if (loading) {
-    return <div>Loading profile...</div>;
-  }
 
   return (
     <div className="profile-container">
-      {loading && <Loading />}
-      <h2>User Profile</h2>
-      {profile && !editing && (
+      <div className="profile-card">
+        <h2 className="profile-title">User Profile</h2>
+
         <div className="profile-info">
-          <p><strong>Name:</strong> {profile.name}</p>
-          <p><strong>Email:</strong> {profile.email}</p>
-          <button onClick={handleEditToggle}>Edit Profile</button>
+          <div className="profile-row">
+            <label className="profile-label">Name:</label>
+            {editing ? (
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="profile-input"
+              />
+            ) : (
+              <span className="profile-value">{name}</span>
+            )}
+          </div>
+
+          <div className="profile-row">
+            <label className="profile-label">Email:</label>
+            {editing ? (
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="profile-input"
+              />
+            ) : (
+              <span className="profile-value">{email}</span>
+            )}
+          </div>
         </div>
-      )}
-      {editing && (
-        <form onSubmit={handleSubmit} className="profile-form">
-          <div className="form-group">
-            <label htmlFor="name">Name:</label>
-            <input 
-              type="text" 
-              name="name" 
-              value={formState.name} 
-              onChange={handleChange} 
-              required 
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email:</label>
-            <input 
-              type="email" 
-              name="email" 
-              value={formState.email} 
-              onChange={handleChange} 
-              required 
-            />
-          </div>
-          <button type="submit">Save Changes</button>
-          <button type="button" onClick={handleEditToggle}>Cancel</button>
-        </form>
-      )}
+
+        <div className="profile-actions">
+          {editing ? (
+            <>
+              <button className="profile-btn save-btn" onClick={handleSave}>
+                Save
+              </button>
+              <button className="profile-btn cancel-btn" onClick={handleEditToggle}>
+                Cancel
+              </button>
+            </>
+          ) : (
+            <button className="profile-btn edit-btn" onClick={handleEditToggle}>
+              Edit Profile
+            </button>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

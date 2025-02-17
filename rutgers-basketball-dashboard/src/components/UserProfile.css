@@ -1,51 +1,94 @@
-/* src/components/UserProfile.css */
 .profile-container {
-    margin: 20px auto;
-    width: 50%;
-    padding: 20px;
-    border: 1px solid #ddd;
-    background-color: #fefefe;
-    border-radius: 8px;
-  }
-  
-  .profile-info {
-    text-align: left;
-  }
-  
-  .profile-info p {
-    margin: 10px 0;
-  }
-  
-  .profile-form {
-    text-align: left;
-  }
-  
-  .profile-form .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .profile-form label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .profile-form input {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-  }
-  
-  .profile-form button {
-    margin-right: 10px;
-    background-color: #cc0000;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .profile-form button:hover {
-    background-color: #a30000;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.profile-card {
+  background-color: #fff;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.profile-title {
+  margin: 0 0 20px 0;
+  font-size: 1.8rem;
+  color: #000000; /* Rutgers red */
+  text-align: center;
+}
+
+.profile-info {
+  margin: 20px 0;
+}
+
+.profile-row {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.profile-label {
+  width: 80px;
+  font-weight: bold;
+  color: #333;
+}
+
+.profile-value {
+  margin-left: 10px;
+  color: #555;
+}
+
+.profile-input {
+  margin-left: 10px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.profile-btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Edit / Save / Cancel button colors */
+.edit-btn {
+  background-color: #cc0000; /* Rutgers red */
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background-color: #a30000;
+}
+
+.save-btn {
+  background-color: #28a745; /* Green */
+  color: #fff;
+}
+
+.save-btn:hover {
+  background-color: #218838;
+}
+
+.cancel-btn {
+  background-color: #6c757d; /* Gray */
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background-color: #5a6268;
+}

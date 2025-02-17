@@ -17,7 +17,6 @@ const Login = () => {
     try {
       const response = await login(username, password);
       if (response.access_token) {
-        // Redirect or update state on success
       } else {
         setError(response.error || "Invalid credentials");
       }
