@@ -89,7 +89,7 @@
         const fetchGames = async (season) => {
             const url = season === "2023" 
                 ? "https://raw.githubusercontent.com/priyarana1/Sports-Hackathon/main/Rutgers_Games_2023_2024.json" 
-                : "https://raw.githubusercontent.com/priyarana1/Sports-Hackathon/main/Rutgers_Games_2022_2023.json"; // Replace with actual API URL for 2024
+                : "https://raw.githubusercontent.com/priyarana1/Sports-Hackathon/main/Rutgers_Games_2022_2023.json";
             const response = await fetch(url);
             const games = await response.json();
 
