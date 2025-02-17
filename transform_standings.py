@@ -37,4 +37,4 @@ for conference in transformed_data['conferences'].values():
     conference.sort(key=lambda x: x['position'])
 
 with open('DF_NCAA_standings.json', 'w') as f:
-    json.dump(transformed_data, f, indent=4)
+    json.dump(transformed_data, f, indent=4) #prints it directly to json file instead of dataframe
