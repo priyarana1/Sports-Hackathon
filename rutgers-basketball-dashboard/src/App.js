@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Leaderboard from "./components/Leaderboard";
-import Voting from "./components/Votingapp";
+import Voting from "./components/VotingApp";
 import GameResults from "./components/GameResults";
 import Standings from "./components/Standings";
 import Rewards from "./components/Rewards";
