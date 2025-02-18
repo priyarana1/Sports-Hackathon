@@ -79,7 +79,7 @@
             </tr>
         </thead>
         <tbody id="gamesTable">
-            <!-- Data will be inserted here -->
+            <!-- data will be inserted here -->
         </tbody>
     </table>
 
@@ -124,14 +124,14 @@
                 row.insertCell(3).innerHTML = `<span style="color:${homeH2 > awayH2 ? 'green' : 'red'}">${homeH2}</span>`;
                 row.insertCell(4).innerHTML = `<span style="color:${homeTotal > awayTotal ? 'green' : 'red'}">${homeTotal}</span>`;
                 
-                // Insert Away Team with color coding
+                // inserts away team with color coding
                 row.insertCell(5).innerHTML = `<span style="color:${awayTotal > homeTotal ? 'green' : 'red'}">${awayTeamName}</span>`;
                 row.insertCell(6).innerHTML = `<span style="color:${awayH1 > homeH1 ? 'green' : 'red'}">${awayH1}</span>`;
                 row.insertCell(7).innerHTML = `<span style="color:${awayH2 > homeH2 ? 'green' : 'red'}">${awayH2}</span>`;
                 row.insertCell(8).innerHTML = `<span style="color:${awayTotal > homeTotal ? 'green' : 'red'}">${awayTotal}</span>`;
                 row.insertCell(9).innerText = winner;
 
-                // Collect data for the chart
+                //data for chart
                 labels.push(homeTeamName + " vs " + awayTeamName);
                 homePoints.push(homeTotal);
                 awayPoints.push(awayTotal);
@@ -173,10 +173,10 @@
             });
         }
 
-        // Initial fetch for the 2023 season
+        // initial
         fetchGames("2023");
 
-        // Event listener for the season toggle
+        //event listener for season toggle
         document.getElementById("seasonToggle").addEventListener("change", (event) => {
             fetchGames(event.target.value);
         });
